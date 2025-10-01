@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Birthday Mom ❤️</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #ffdde1, #ee9ca7);
+      overflow-x: hidden;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-top: 20px;
+      color: #fff;
+      text-shadow: 2px 2px 4px #00000050;
+      animation: glow 2s infinite alternate;
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 10px #ff99cc, 0 0 20px #ff66b2; }
+      to { text-shadow: 0 0 20px #ff3385, 0 0 30px #ff0066; }
+    }
+
+    img {
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      border: 6px solid white;
+      box-shadow: 0 0 25px rgba(0,0,0,0.3);
+      margin: 20px 0;
+    }
+
+    button {
+      background: #ff66b2;
+      border: none;
+      padding: 15px 30px;
+      margin: 15px;
+      border-radius: 25px;
+      font-size: 18px;
+      color: white;
+      cursor: pointer;
+      transition: 0.3s;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    button:hover {
+      background: #ff3385;
+      transform: scale(1.05);
+    }
+
+    .confetti {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      overflow: hidden;
+      z-index: -1;
+    }
+
+    .confetti span {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background: #fff;
+      animation: fall 5s linear infinite;
+    }
+
+    @keyframes fall {
+      0% { transform: translateY(-10vh); }
+      100% { transform: translateY(100vh); }
+    }
+  </style>
+</head>
+<body>
+  <h1>🎂 Happy Birthday Amma! 🎉</h1>
+  <img src="amma1.png" alt="Mom Picture">
+  <div>
+    <button onclick="playVideo()">▶ Watch Video</button>
+    <button onclick="playAudio()">🎧 Hear My Wishes</button>
+  </div>
+
+  <!-- Hidden Video -->
+  <div id="videoBox" style="display:none; margin-top:20px;">
+    <video width="280" controls>
+      <source src="birthday-video.mp4" type="video/mp4">
+      Your browser does not support video.
+    </video>
+  </div>
+
+  <!-- Hidden Audio -->
+  <div id="audioBox" style="display:none; margin-top:20px;">
+    <audio controls>
+      <source src="indu.mp3" type="audio/mpeg">
+      Your browser does not support audio.
+    </audio> <br>
+    <audio controls>
+      <source src="anji.mp3" type="audio/mpeg">
+      Your browser does not support audio.
+    </audio><br>
+    <audio controls>
+      <source src="sachith.mp3" type="audio/mpeg">
+      Your browser does not support audio.
+    </audio>
+  </div>
+
+  <!-- Confetti Decoration -->
+  <div class="confetti">
+    <span style="left:10%; animation-delay:0s; background:#ff4081;"></span>
+    <span style="left:20%; animation-delay:1s; background:#ffeb3b;"></span>
+    <span style="left:30%; animation-delay:2s; background:#4caf50;"></span>
+    <span style="left:40%; animation-delay:0.5s; background:#2196f3;"></span>
+    <span style="left:50%; animation-delay:1.5s; background:#9c27b0;"></span>
+    <span style="left:60%; animation-delay:2.5s; background:#ff9800;"></span>
+    <span style="left:70%; animation-delay:0.7s; background:#00bcd4;"></span>
+    <span style="left:80%; animation-delay:1.2s; background:#8bc34a;"></span>
+    <span style="left:90%; animation-delay:2.2s; background:#e91e63;"></span>
+  </div>
+
+  <script>
+    function playVideo() {
+      document.getElementById('videoBox').style.display = 'block';
+      document.getElementById('audioBox').style.display = 'none';
+    }
+    function playAudio() {
+      document.getElementById('audioBox').style.display = 'block';
+      document.getElementById('videoBox').style.display = 'none';
+    }
+  </script>
+</body>
+</html>
